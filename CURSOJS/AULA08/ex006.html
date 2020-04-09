@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiro Comandos emf</title>
+
+    <style>
+            h2{
+                color:  white;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            
+            body{
+                background-color: steelblue;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
+        </style>
+</head>
+
+<body>
+    
+    <h1>Iniciando Estudos com DOM</h1>
+    <h2>Curso em Video</h2>
+    <p>Aqui teremos resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS </p>
+    <div id="msg">Clique aqui</div>
+
+    <script>
+        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Esta escrito assim -> ' + p1.innerText)
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.writeln('Teste' + p2.innerHTML)
+
+        var div1 = window.document.getElementById('msg')
+        window.document.write(div1.innerHTML)
+        div1.style.background = 'green'
+
+      var ht2 = window.document.h2
+      ht2.style.background = ''
+      
+      
+
+    </script>
+</body>
+</html>

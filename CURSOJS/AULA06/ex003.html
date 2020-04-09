@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu Primeiro Programa</title>
+
+<style>
+    body{
+        background-color: pink;
+        color: white;
+        font: normal 16pt Arial;
+    }
+    h1{
+       color:rgb(216, 150, 27); 
+    }
+    /*COMENTARIO CSS*/
+</style>
+ 
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Mundo da tecnologia! Estamos bem!</p>
+<!--COMENTARIO HTML-->
+
+ <script>
+   var nome = window.prompt('Qual seu nome?') //Prompt - Permite entrada
+  // window.alert('Olá,' + nome + '!')
+  var sobrenome = window.prompt('E seu sobrenome ' + nome)
+  window.alert('Muito bem! Seu nome é ' + nome + ' ' + sobrenome)
+
+  var n1 = Number.parseInt(window.prompt(nome + ' ' +  'Digite um valor para N1'))
+  var n2 = Number(window.prompt('Agora um valor para N2'))
+  resul = n1 + n2
+  window.alert('Por acaso o valor é ' + resul)
+  var s1 = String(window.prompt(nome + ' ' + 'Digite um numero'))
+  var s2 = String(window.prompt('Agora um segundo numero'))
+  results = s1 + s2
+  window.alert(`O valores em string é  ${results} ${nome} ${sobrenome}`)
+  tamnome = nome.length
+  window.alert(`${nome} tem ${tamnome} caracteres`)
+
+</script>
+
+</body>
+</html>

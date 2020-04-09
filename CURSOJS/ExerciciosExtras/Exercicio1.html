@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 - Primeiros Passos</title>
+</head>
+<style>
+
+    body{
+        background-color: black;
+        font: normal 14pt Arial;
+        color: pink;
+    }
+
+    h1{
+        color: aliceblue;
+    }
+
+</style>
+<body>
+    <h1> Calcule seu desconto e veja sua aprovação </h1>
+<script>
+
+//Entrada de informações
+    window.alert('Olá aluno, entre com seus dados!')
+    var nome  = window.prompt('Qual seu nome ?')
+    var idade = window.prompt(`Qual sua idade, ${nome}`)
+
+    window.alert('Agora entre com suas notas')
+    var nota = [];
+ 
+    for(var i = 1;i <= 4;++i){
+        nota[i] = Number(window.prompt(`Nota ${i}`))
+        //window.alert(`Você digitou ${nota[i]}`)
+    }
+
+   var mens = window.prompt('Qual o valor da sua mensalidade ?')
+
+//Processamento
+    document.write(`Olá, ${nome}!`)
+    document.write(`ALUNO...: ${nome}`)
+    document.write(`IDADE...:  ${idade}`)
+    soma = 0;
+
+    for(var i = 1;i <= 4;++i){
+        document.writeln(`Sua nota ${i} foi ${nota[i]}`)
+        var soma = soma + nota[i];
+    }
+
+   var media = soma/4;
+   document.writeln(`Sua média foi ${media}`)
+
+   if (media >= 5) {
+     window.document.writeln("Você foi Aprovado")
+     desc = mens * 0.05;
+     vlrf= mens - desc;
+ 
+    document.write(`Seu desconto é de ${desc.toLocaleString('pt-Br',{style: 'currency', currency: 'BRL'})}, 
+     sua mensalidade será de ${vlrf.toLocaleString('pt-Br',{style: 'currency', currency: 'BRL'})}`)
+     }
+     else{
+        window.document.writeln('Você foi Reprovado - Nenhum desconto aplicado')
+   }
+    
+
+
+</script>    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 - Melhorando(2)</title>
+</head>
+<style>
+
+    body{
+        background-color: black;
+        font: normal 14pt Arial;
+        color: rgb(228, 53, 134);
+    }
+    h1{
+        color: white;
+    }
+    input#btn{
+        margin-top: 10px;
+     }
+    input#nome{
+        width: 300px;
+    }
+    input#idade{
+        width: 40px;
+    }
+    div#res{
+        margin-top:20px;
+    }
+
+</style>
+<body>
+    <h1> Calcule seu desconto e veja sua aprovação </h1>
+    <p>Qual seu nome?</p>
+    <input type="text" name="nome" id="nome">
+    <p>Qual sua idade?</p>
+    <input type="text" name="idade" id="idade"> anos.
+
+    <p>Entre com suas notas</p>
+    <input type="number" name="nota" id="nota1" min="0" max="10">
+    <input type="number" name="nota" id="nota2" min="0" max="10">
+    <p>Qual o valor de sua mensalidade?</p>
+    <input type="number" name="mens"  id="mens"><br>
+    <input type="button" value="Verificar" id="btn" onclick="verificar()">
+    <div id="res">Resultado</div>
+    <p id="situa">SITUACAO<p>
+
+    
+<script>
+
+    function verificar(){
+
+        var nota1 = document.getElementsByName("nota")[0]
+        var nota2 = document.getElementsByName("nota")[1]
+        var res = document.getElementById('res')
+        var nt1 = Number(nota1.value)
+        var nt2 = Number(nota2.value)
+        var notaf = nt1 + nt2
+        var media = notaf/2
+        res.innerHTML =(`Sua média foi ${media}`)
+
+        if (media >= 5) {
+            var sit = document.getElementById("situa")
+            var mensa = document.getElementById("mens")
+            var mensb = Number(mensa.value)
+            var desc = mensb * 0.05;
+            var vlrf = mensb - desc;
+            sit.innerHTML = `Você foi aprovado.<br>Seu desconto é de ${desc.toLocaleString('pt-Br',{style: 'currency', currency: 'BRL'})}<br>
+            Sua mensalidade será de ${vlrf.toLocaleString('pt-Br',{style: 'currency', currency: 'BRL'})}`
+        }
+        else{
+        sit.innerHTML = (`Você foi Reprovado - Nenhum desconto aplicado`)
+        }
+    }
+</script>    
+</body>
+</html>

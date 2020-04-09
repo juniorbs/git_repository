@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usando DOM</title>
+    <style>
+    body{
+        background: rgb(113, 94, 134);
+        color: black;
+        font: normal 14pt Monospace;
+    }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudo: DOM</h1>
+    <p>Aqui está o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique Aqui</div>
+    <div class="msgs">Clique Aqui</div>
+
+<script>
+    var corpo = window.document.body
+    var p1 = window.document.getElementsByTagName("p")[0]
+    var p2 = window.document.getElementsByTagName("p")[1]
+    window.document.write('Primeiro Paragrafo >> ' + p1.innerText)
+    //window.document.write('Segundo Paragrafo >> '  + p2.innerText)
+   /* corpo.style.background = 'white'
+    p1.style.color = 'purple'
+    //window.document.write(p2.innerHTML)
+    var d = window.document.getElementById("msg")
+    d.style.background = 'gray'
+    //d.innerText = 'Estou aguardando'
+    window.document.getElementById('msg').innerText = 'Olá'
+    var dv = document.getElementsByName('msgs')[0]
+    dv.innerText = 'Olá'*/
+     var dvv = window.document.querySelector('div#msg')
+     dvv.style.background = 'pink'
+
+</script>
+
+</body>
+</html>
