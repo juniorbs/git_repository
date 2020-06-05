@@ -1,0 +1,286 @@
+/* RESET -> vai inicializar todos os elementos da página
+REM -> Unidade relativa, que usa este root como base*/
+* {margin: 0; padding: 0; font-size: 100%;box-sizing: border-box;font-family: 'Jura', sans-serif; }
+/*lista*/
+nav, ul{list-style: none;}
+/*links*/
+a{text-decoration: none; cursor: pointer; opacity: 0.8;}
+/*Qdo o ponteiro passar pelo link*/
+a:hover{opacity: 1;}
+
+/* Aqui o header, é nosso container*/
+header{
+    background-color: rgba(237, 245, 164, 0.815);
+    width: 100%;
+    /* Pos absolute irá sobrepor todos elementos, junto top e left*/
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-style: bold;
+}
+/*definindo tamanho da imagem*/
+header img{
+    width: 200px;
+}
+
+/*display FLEX, por default tem direção ROW*/
+header nav{
+    display: flex;
+}
+
+/*definindo cor dos links da lista*/
+header li a{
+    color: rgb(90, 124, 21);
+}
+
+/*definindo margem  itens da lista*/
+header li{
+    margin: 0 15px;
+}
+/*Aqui irá tirar a margem dos itens da lista das extremidades*/
+header li:first-child{margin-left: 0}
+header li:last-child{margin-right: 0}
+
+/*Aqui, para quando o tamanho da tela atingir 700px, o menu vai ficar em colum, abaixo do logo*/
+@media(max-width:700px){
+    header {flex-direction: column;}
+    header img{margin-bottom: 15px;}
+}
+
+/*classe hero - Imagem de fundo com textos e links*/
+.hero{
+    /*inserindo imagem de fundo*/
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color:rgb(241, 202, 72);
+    /* .hero é o container(pai), todas atribuiçòes dentro desta classe terá efeito nos elementos filhos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*H1 é child de .hero*/
+.hero h1{
+    font-size: 3.2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-shadow: green;
+}
+.hero h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.hero .btn{
+    background-color: rgba(255, 239, 213, 0.836);
+    border-radius: 4px;
+    color: olive;
+    padding:15px 40px;
+    text-transform: uppercase;
+}
+@media(max-width:700px){
+    .hero h1 {font-size: 2.5rem}
+    .hero h3{font-size: 1.5rem}
+    }
+
+
+
+/*Conheça o Hotel*/
+.con-hotel{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.con-hotel h3{
+    font-size: 2rem;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.con-hotel p{
+    max-width: 800px;
+    margin-bottom: 35px;
+}
+.con-hotel hr{
+    width: 300px;
+    height: 2px;
+    background-color: olive;
+    margin-bottom: 70px;
+    border:none;
+}
+
+.con-hotel .grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.con-hotel .grid li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+/*tamanho inicial das imagens*/
+.con-hotel .grid li.small{
+    flex-basis: 40%;
+}
+.con-hotel .grid li.large{
+    flex-basis: 60%;
+}
+/*Qdo a tela chegar a 700px, as imagens irão assumir tamanho igual, 100%*/
+@media(max-width:700px){
+    .con-hotel .grid li.small {flex-basis: 100%}
+    .con-hotel .grid li.large{flex-basis: 100%}
+    }
+
+/*Caracteristicas*/
+.car-hotel{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 50px;
+    background-color: rgb(194, 194, 9);
+    text-align: center;
+}
+
+.car-hotel h3{
+    font-size: 2rem;
+    margin-bottom: 35px;
+    text-align: center;
+    margin-top: 0;
+    color: white;
+}
+.car-hotel p{
+    max-width: 800px;
+    margin-bottom: 35px;
+}
+.car-hotel hr{
+    width: 300px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 70px;
+    border:none;
+}    
+
+.car-hotel .grid{
+    max-width: 100%;
+    display: flex;
+    align-content: center;
+}
+
+.car-hotel .grid li{
+    padding: 0 30px;
+    text-align: center;
+}
+
+.car-hotel .grid li i{
+    color: olivedrab;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.car-hotel .grid li h4{
+    font-size: 1.5rem;
+    color: olive;
+    margin-bottom: 30px;
+    align-items: center; 
+}
+
+.car-hotel .grid li p{
+    color: white;
+}
+@media(max-width:850px){
+    .car-hotel .grid {flex-direction: column}
+    }
+
+/*news*/
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+    color: olivedrab;
+
+}
+
+.news h3{
+    font-size: 2rem;
+    margin-bottom: 35px;
+    text-align: center;
+    margin-top: 0;
+}
+.news p{
+    max-width: 800px;
+    margin-bottom: 35px;
+}
+.news hr{
+    width: 300px;
+    height: 1px;
+    background-color: olive;
+    margin-bottom: 40px;
+    border:none;
+}  
+
+.news form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 800px;
+}
+
+.news form #email{
+    padding: 15px;
+    border: 1px solid olivedrab;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.news form #btt{
+    padding: 15px;
+    text-transform: uppercase;
+    background-color: rgb(194, 194, 9);
+    color: white;
+    border-radius: 4px;
+}
+@media(max-width:700px){
+    .news form #email {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+                }
+    }
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(194, 194, 9);
+    padding: 30px 0px;
+    align-items: center;
+}
+.foot ul{
+    display: flex;
+    margin-bottom: 25px;
+}
+.foot li i{
+    color: olive;
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+.foot p{
+    color: olive;
+    text-align: center;
+
+}

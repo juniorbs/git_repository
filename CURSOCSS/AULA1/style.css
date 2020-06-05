@@ -1,0 +1,43 @@
+.container{
+    background-color: pink;
+    height: 400px;
+    display: flex;
+    /*"inicializa" o uso das propriedades flex*/
+    flex-direction: row;
+    /*direção dos elementos filhos: column | column-reverse | row | row-reverse*/
+    flex-wrap: nowrap;
+    /*permite quebra de lina: nowrap | wrap | wrap-reverse*/
+    /* -- flex-flow: row nowrap;
+    /*permite o uso composto do flex-wrap e do flex direction*/
+    justify-content:  flex-start;
+    /*alinhamento horizontal: flex-start | flex-end | center | space-between | space-around | space-evenly*/
+    align-items: stretch;
+    /*alinhamento vertical: */
+    align-content: stretch ;
+}
+
+.item{
+    background-color: darksalmon ;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    width: 30px;
+    height: 50px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
+}
+
+.article01{
+    background: red;
+}
+.article02{
+    background: red;
+}
+.article03{
+    align-self: stretch;
+    background: red;
+}
+.article04{
+    background: red;
+}

@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contador</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     
     <header>
-        <h1>Contador</h1>
+        <h1>Tabuada</h1>
     </header>
+
     <section>
         <div>
-            <p>Inicio :<input type="number" name="init" id="init"></p>
-            <p>Fim    :<input type="number" name="fim" id="fim"></p>
-            <p>Passo  :<input type="number" name="passo" id="passo"></p>
-            <p><input type="button" value="CONTAR" onclick="contar()"></p>
+            <p>Multiplicador.:<input type="number" name="inpnumb" id="inpnumb">
+            <input type="button" value="Calcular" name="btn" onclick="calcular()"></p>
         </div>
-        <div id="res">
-            Contando:
+        <div>
+            <select name="tabuada" id="res" size="10"></select>
+            <p id="att"></p>
         </div>
     </section>
 

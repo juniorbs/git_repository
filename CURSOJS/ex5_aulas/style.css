@@ -2,6 +2,7 @@ body{
     background: rgb(103, 148, 214);
     font: normal 14pt Verdana;
 }
+
 header{
     color: whitesmoke;
     text-align: center;
@@ -13,7 +14,7 @@ section{
     padding: 15px;
     width: 500px;
     margin: auto;
-    text-align: left;
+    text-align: center;
     box-shadow:3px 5px 8px paleturquoise;
 }
 
@@ -22,7 +23,24 @@ footer{
     color: whitesmoke;
 }
 
-p{
-    letter-spacing: 2px;
+.alin{
+    text-align: left;
 }
 
+#lista{
+    width: 200px;
+    border-radius: 5px;
+}
+
+#anali{
+    width: 110px;
+}
+
+#res{
+    font: italic 12pt;
+}
+
+#limpar{
+    width: 80px;
+    
+}
